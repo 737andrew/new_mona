@@ -1,0 +1,46 @@
+$one:#FFB32C;
+$one_dark:#d4860c;
+
+$twoo:#2ECC71;
+$twoo_dark:#27ae60;
+// $twoo:#4cd137;
+// $twoo_dark:#44bd32;
+$three:#282828;
+// $three:#484848;
+$bgc:#353b48;//rgba(53, 59, 72,1.0) (Blue nights)British Palette by Jan Losert 
+$bg-sec:#dcdde1;
+// $bgc:#2f3542;
+// $bgc:#222f3e;
+$h1:#f5f6fa;
+$h2:#2f3640;
+
+
+
+$t_red: #dd0e0e;
+$line: #4c4b4b;
+
+
+
+
+
+
+
+
+
+
+
+
+
+$mw:1170;
+$md1:$mw+12;
+$md2:992.98;
+$md3:767.98;
+$md4:479.98;
+
+
+
+// MIXIN
+
+@mixin anim($time,$delay) {-webkit-transition: all $time ease $delay;-moz-transition: all $time ease $delay;-o-transition: all $time ease $delay;transition: all $time ease $delay;}
+
+

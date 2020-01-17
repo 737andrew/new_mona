@@ -1,0 +1,53 @@
+@import "var/_normalize.scss";
+@import "var/_variables.scss";
+body {
+ 
+background:$bgc;
+}
+a{
+  color:rgb(225, 231, 222); 
+transform: scale(0.5);
+@media screen and (max-width: $md4+px) { 
+  color: $twoo;
+}
+
+}
+*{
+  box-sizing: border-box; 
+}
+
+div{
+  display: flex;
+}
+.image {
+  background-image: url(image@1x.png);
+}
+@media (min-resolution: 2dppx) {
+  .image {
+    background-image: url(image@2x.png);
+  }
+}
+
+a {
+  @media screen and (max-width: 767px) {
+    color: red;
+
+    
+  }
+}
+body {
+  @media screen and (max-width: 992px) {
+    background: blue; 
+    
+  }
+  @media screen and (max-width: 767px) {
+    background: $one; 
+    
+  }
+  @media screen and (max-width: $md4+px) { 
+    background-color: $one_dark;
+  }
+}
+
+@import "block/_header.scss";
+@import "block/_footer.scss";
