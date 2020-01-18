@@ -1,0 +1,121 @@
+.hero {
+  margin: 0 auto;
+  max-width: 1170px;
+
+  &__row {
+    height: 460px;
+    background-image: url(../img/hero__bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: 1;
+    @media screen and (max-width: $md3+px) { 
+      height: 390px;
+      background-image: url(../img/hero__bg-390.jpg);
+      background-position:  70% 0;
+    }
+  }
+  // .hero__ofer
+  &__ofer {
+    margin-left: 15px;
+    width: 600px;
+    height: 300px;
+    background-color: rgba(53, 59, 72, 0.46);
+    position: absolute;
+    z-index: 5;
+    top: 18%;
+    @media screen and (max-width: $md1+px) {
+      width: 550px;
+    }
+    @media screen and (max-width: $md2+px) {
+      top: 20%;
+    }
+    @media screen and (max-width: $md3+px) { 
+      width: 90%;
+      top:10%;
+      
+    }
+    @media screen and (max-width: $md4+px) { 
+      top:10%;
+    }
+    h4 {
+      margin-left: 56px;
+      font-size: 20px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.1;
+      letter-spacing: normal;
+      color: $light;
+      @media screen and (max-width: $md3+px) {
+        margin-left: 40px;
+      }
+      @media screen and (max-width: $md4+px) { 
+        font-size: 16px;
+      }
+      
+    }
+    p {
+      margin: 18px 0px 14px 56px;
+
+      height: 16px;
+      font-size: 14px;
+
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: $light;
+      @media screen and (max-width: $md3+px) { 
+        margin: 18px 0px 14px 40px;
+        color: darken($light, 10%);
+        
+      }
+      @media screen and (max-width: $md4+px) { 
+        font-size: 12px;
+      }
+    }
+  }
+  &__title {
+    margin: 65px 0px 6px 0px;
+    font-weight: bold;
+    font-stretch: condensed;
+    color: $light;
+    @media screen and (max-width: $md3+px) {
+      font-size: 24px;
+    }
+    @media screen and (max-width: 410px) { 
+        font-size: 20px;
+      }
+    @media screen and (max-width: 360px) { 
+        font-size: 18px;
+      }
+    span {
+      color: $text;
+      background: $one;
+      padding: 0px 4px 8px 4px;
+    }
+  }
+}
+.hero__btn {
+  display: block;
+  height: 48px;
+  padding: 13px 30px;
+  margin: 20px 0px 20px 96px;
+  @media screen and (max-width: $md4+px) { 
+    margin: 20px auto;
+  }
+}
+.btn {
+  width: 167px;
+
+  background-image: linear-gradient(to bottom, #2ecc71, #27ae60);
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+}
+.hero .container {
+  padding: 0;
+}

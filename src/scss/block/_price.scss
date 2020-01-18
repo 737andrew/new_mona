@@ -1,0 +1,133 @@
+@import "../var/_variables.scss";
+
+.price {
+  // .price__title
+  &__title {
+    padding: 30px 0;
+    text-align: center;
+  }
+  // .price__row
+  &__row {
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: $md2+px) { 
+      flex-direction: column;
+    }
+  }
+  // .price__block
+  &__block {
+    display: flex;
+    @media screen and (max-width: $md2+px) { 
+      justify-content: space-around;
+      
+    }
+    @media screen and (max-width: $md4+px) { 
+      flex-direction: column;
+      
+    }
+  }
+}
+.card {
+    width: 208px;
+  height: 280px;
+  box-shadow: 2px 2px 3px 3px rgba(53, 59, 72, 0.07), -2px -2px 3px 3px rgba(53, 59, 72, 0.07);
+  border: solid 1px $brown-grey;
+  background-color: #ffffff;
+  margin: 30px;
+  @media screen and (max-width: $md1+px) { 
+    margin: 30px 15px;
+  }
+  @media screen and (max-width: $md4+px) { 
+    align-self:center;
+  }
+  // .card__title
+  &__title {
+    margin-top: 10px;
+  font-size: 18px;
+  text-align: center;
+  color: $text;
+  }
+  // .card__image
+  &__image {
+    text-align:center;
+    margin: 24px 0;
+  }
+  // .card__btn
+  &__btn {
+  }
+  // .card__btn-left
+}
+// triangle
+
+$tr-hight: 38px;
+$color-1: $bg-c;
+$color-2: $one;
+$color-font-1: $light;
+$color-font-2: $color-1;
+$font-s: $tr-hight/3;
+$border: ceil($tr-hight/10);
+
+@mixin triangle1($h-t) {
+  right: -($h-t/2 + $h-t/4);
+  border: $h-t/2 solid transparent;
+  border-left: $h-t/4 solid $color-1;
+}
+@mixin tri-span($span-font-size, $span-color) {
+  font-size: $span-font-size/2;
+  margin: auto;
+  color: $span-color;
+}
+
+.card__btn {
+  width: 90%;
+  height: $tr-hight;
+  margin: 0px auto;
+  display: flex;
+  position: relative;
+  background: $color-2;
+  border-radius: $border;
+
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+ 
+
+
+
+}
+
+.card__btn-left {
+  position: relative;
+  flex-basis: 40%;
+  background: $color-1;
+  z-index: 3;
+  display: flex;
+  border-top-left-radius: $border;
+  border-bottom-left-radius: $border;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    @include triangle1($tr-hight);
+  }
+  a {
+    margin: auto;
+  }
+  span {
+    @include tri-span($tr-hight, $color-font-1);
+  }
+}
+// .card__btn-right
+.card__btn-right {
+  position: relative;
+  flex-basis: 60%;
+  z-index: 1;
+  display: flex;
+  span {
+    @include tri-span($tr-hight, $color-font-2);
+  }
+}

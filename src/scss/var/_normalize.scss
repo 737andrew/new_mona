@@ -6,7 +6,7 @@ body { width: 100%; }
 
 /** Render the `main` element consistently in IE. */
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary  { display: block; }
-h1 { font-size: 2em; margin: 0.67em 0; }
+// h1 { font-size: 2em; margin: 0.67em 0; }
 hr { box-sizing: content-box; /* 1 */ height: 0; /* 1 */ overflow: visible; /* 2 */ }
 pre { font-family: monospace, monospace; /* 1 */ font-size: 1em; /* 2 */ }
 a { background-color: transparent;text-decoration: none;}
