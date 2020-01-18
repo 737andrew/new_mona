@@ -15,6 +15,11 @@
       background-image: url(../img/hero__bg-390.jpg);
       background-position:  70% 0;
     }
+    @media screen and (max-width: $md4+px) { 
+      height: 350px;
+      background-image: url(../img/hero__bg-350.jpg);
+      background-position:  60% 0;
+    }
   }
   // .hero__ofer
   &__ofer {
@@ -106,7 +111,7 @@
   padding: 13px 30px;
   margin: 20px 0px 20px 96px;
   @media screen and (max-width: $md4+px) { 
-    margin: 20px auto;
+    margin: 30px auto 20px;
   }
 }
 .btn {
