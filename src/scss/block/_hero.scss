@@ -21,7 +21,7 @@
     margin-left: 15px;
     width: 600px;
     height: 300px;
-    background-color: rgba(53, 59, 72, 0.46);
+    background-color: rgba(53, 59, 72, 0.66);
     position: absolute;
     z-index: 5;
     top: 18%;
@@ -34,6 +34,7 @@
     @media screen and (max-width: $md3+px) { 
       width: 90%;
       top:10%;
+      height: 270px;
       
     }
     @media screen and (max-width: $md4+px) { 
@@ -84,6 +85,7 @@
     color: $light;
     @media screen and (max-width: $md3+px) {
       font-size: 24px;
+      margin: 45px 0px 6px 0px;
     }
     @media screen and (max-width: 410px) { 
         font-size: 20px;

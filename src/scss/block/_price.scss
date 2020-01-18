@@ -80,23 +80,19 @@ $border: ceil($tr-hight/10);
 
 .card__btn {
   width: 90%;
+  margin: 0 auto;
+}
+.card__btn-link{
   height: $tr-hight;
-  margin: 0px auto;
-  display: flex;
+    display: flex;
   position: relative;
   background: $color-2;
   border-radius: $border;
 
   font-size: 20px;
   font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1;
   letter-spacing: normal;
- 
-
-
-
 }
 
 .card__btn-left {

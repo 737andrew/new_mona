@@ -454,7 +454,7 @@ H4 {
   margin-left: 15px;
   width: 600px;
   height: 300px;
-  background-color: rgba(53, 59, 72, 0.46);
+  background-color: rgba(53, 59, 72, 0.66);
   position: absolute;
   z-index: 5;
   top: 18%;
@@ -556,8 +556,11 @@ H4 {
 
 .card__btn {
   width: 90%;
+  margin: 0 auto;
+}
+
+.card__btn-link {
   height: 38px;
-  margin: 0px auto;
   display: -webkit-box;
   display: flex;
   position: relative;
@@ -565,8 +568,6 @@ H4 {
   border-radius: 4px;
   font-size: 20px;
   font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1;
   letter-spacing: normal;
 }
@@ -792,6 +793,7 @@ H4 {
   .hero__ofer {
     width: 90%;
     top: 10%;
+    height: 270px;
   }
 
   .hero__ofer h4 {
@@ -805,6 +807,7 @@ H4 {
 
   .hero__title {
     font-size: 24px;
+    margin: 45px 0px 6px 0px;
   }
 }
 
