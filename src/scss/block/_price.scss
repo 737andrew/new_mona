@@ -165,11 +165,14 @@ $border: ceil($tr-hight/10);
     margin: 0 0 20px 0;
     font-size: 18px;
     color: $text;
-    background: $one;
+    background-color: $one;
     box-shadow: inset 0px -2px 0 0 $text;
-    @include anim(0.3s, 0.2s) 
-    &:hover {
-      background-color: $one-20;
-    }
+    @include anim(0.3s, 0.2s) ;
+        &:hover{
+        background-color: $one-20;
+      }
   }
+  // &__btn:hover{
+  //   background: $one-20;
+  // }
 }
