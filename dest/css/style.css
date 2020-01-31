@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document ========================================================================== */
@@ -353,7 +355,12 @@ H3 {
 
 H4 {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .img-circle {
@@ -452,41 +459,43 @@ H4 {
 
 .hero__ofer {
   margin-left: 15px;
-  width: 600px;
-  height: 300px;
+  width: 700px;
+  height: 350px;
   background-color: rgba(53, 59, 72, 0.66);
   position: absolute;
   z-index: 5;
-  top: 18%;
+  top: 14%;
 }
 
 .hero__ofer h4 {
-  margin-left: 56px;
-  font-size: 20px;
-  font-weight: 500;
-  font-stretch: normal;
+  margin-left: 75px;
+  font-size: 24px;
   font-style: normal;
   line-height: 1.1;
   letter-spacing: normal;
   color: #f5f6fa;
+  font-weight: normal;
 }
 
 .hero__ofer p {
-  margin: 18px 0px 14px 56px;
+  margin: 30px 0;
   height: 16px;
   font-size: 14px;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #f5f6fa;
+}
+
+.hero__label {
+  width: 100%;
+  text-align: left;
+  margin: 40px 0px 30px 70px;
 }
 
 .hero__title {
   margin: 65px 0px 6px 0px;
   font-weight: bold;
-  font-stretch: condensed;
+  font-family: 'Roboto Condensed', sans-serif;
   color: #f5f6fa;
+  font-size: 52px;
 }
 
 .hero__title span {
@@ -496,16 +505,13 @@ H4 {
 }
 
 .hero__btn {
-  display: block;
-  height: 48px;
-  padding: 13px 30px;
-  margin: 20px 0px 20px 96px;
+  height: 37px;
+  padding: 8px 30px;
+  margin: 20px  auto;
+  background: #EB5757;
 }
 
 .btn {
-  width: 167px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#2ecc71), to(#27ae60));
-  background-image: linear-gradient(to bottom, #2ecc71, #27ae60);
   font-size: 18px;
   font-weight: bold;
   text-align: center;
@@ -514,6 +520,153 @@ H4 {
 
 .hero .container {
   padding: 0;
+}
+
+/* Стили модального окна */
+
+.modal-header {
+  border-bottom: #f5f6fa solid 1px;
+  color: #555;
+  margin: 0;
+  text-align: center;
+}
+
+.modal-header h2 {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.modal-phone {
+  margin: 0 auto;
+  width: 100%;
+  background: #dcdde1;
+  padding: .5rem 0;
+}
+
+.modal-phone a {
+  text-decoration: none;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #555;
+  margin: 20px 0;
+}
+
+/* кнопка закрытия окна */
+
+.btn-close {
+  color: #aaa;
+  cursor: pointer;
+  font-size: 30px;
+  text-decoration: none;
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+}
+
+.btn-close:hover {
+  color: #e84118;
+}
+
+.btn-close span {
+  font-size: 16px;
+}
+
+/* слой затемнения */
+
+.modal-wrap:before {
+  content: "";
+  display: none;
+  background: rgba(53, 59, 72, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+}
+
+.modal-overlay {
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 102;
+}
+
+/* активация слоя затемнения и модального блока */
+
+.modal-open:checked ~ .modal-wrap:before,
+.modal-open:checked ~ .modal-wrap .modal-overlay {
+  display: block;
+}
+
+.modal-open:checked ~ .modal-wrap .modal-dialog {
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  top: 5%;
+}
+
+/* элементы модального окна */
+
+.modal-dialog {
+  background: #fefefe;
+  border: #555555 solid 1px;
+  border-radius: 5px;
+  position: fixed;
+  left: 50%;
+  top: -100%;
+  -webkit-transform: translate(-50%, -500%);
+  transform: translate(-50%, -500%);
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  transition: -webkit-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;
+  transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
+  width: 90%;
+  max-width: 500px;
+  z-index: 103;
+}
+
+.modal-body {
+  padding: 1rem 1rem 3rem 1rem;
+}
+
+.modal-body p {
+  margin: 0;
+}
+
+.modal-body .button {
+  width: 100%;
+}
+
+/* Элементы формы контактов */
+
+.textbox {
+  height: 45px;
+  width: 100%;
+  border-radius: 3px;
+  border: rgba(0, 0, 0, 0.3) 1px solid;
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+.textbox:focus {
+  outline: none;
+  border: #0097e6 1px solid;
+  color: #0097e6;
+}
+
+/* кнопка "отправить" формы */
+
+.btn-form {
+  width: 100%;
+  height: 44px;
+  box-sizing: border-box;
+  -webkit-transition: background .4s;
+  transition: background .4s;
 }
 
 .price__title {
@@ -537,7 +690,8 @@ H4 {
   width: 208px;
   height: 280px;
   box-shadow: 2px 2px 3px 3px rgba(53, 59, 72, 0.07), -2px -2px 3px 3px rgba(53, 59, 72, 0.07);
-  border: solid 1px #979797;
+  border-radius: 8px;
+  border: solid 1px #7f8fa6;
   background-color: #ffffff;
   margin: 30px;
 }
@@ -555,7 +709,7 @@ H4 {
 }
 
 .card__btn {
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -565,11 +719,14 @@ H4 {
   display: flex;
   position: relative;
   background: #f7f051;
-  border-radius: 4px;
+  box-shadow: inset 0px -2px 0 0 #2f3640;
   font-size: 20px;
   font-weight: 500;
   line-height: 1;
-  letter-spacing: normal;
+}
+
+.card__btn-link:hover {
+  background-color: #d8cf0a;
 }
 
 .card__btn-left {
@@ -603,6 +760,12 @@ H4 {
   color: #f5f6fa;
 }
 
+.card__btn-left span:hover {
+  font-size: 19px;
+  margin: auto;
+  color: #7f8fa6;
+}
+
 .card__btn-right {
   position: relative;
   flex-basis: 60%;
@@ -615,6 +778,140 @@ H4 {
   font-size: 19px;
   margin: auto;
   color: #353b48;
+}
+
+.calc__title {
+  text-align: center;
+  margin: 39px 0px 29px 0px;
+}
+
+.calc__link {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.calc__btn {
+  display: inline-block;
+  height: 37px;
+  padding: 8px 30px;
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  color: #2f3640;
+  background: #f7f051;
+  box-shadow: inset 0px -2px 0 0 #2f3640;
+  -webkit-transition: all 0.3s ease 0.2s;
+  transition: all 0.3s ease 0.2s;
+}
+
+.calc__btn:hover {
+  background-color: #d8cf0a;
+}
+
+.preim {
+  position: relative;
+  width: 100%;
+  background-color: #f5f6fa;
+}
+
+.preim__title {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.preim__row {
+  padding: 40px 0;
+  display: -webkit-box;
+  display: flex;
+  justify-content: space-around;
+}
+
+.preim__block {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.preim__item {
+  text-align: center;
+  flex-basis: 50%;
+}
+
+.preim__name {
+  margin: 20px;
+}
+
+.preim::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  top: 0;
+  /* Положение треугольника */
+  border: 40px solid transparent;
+  /* Прозрачные границы */
+  border-top: 24px solid #ffffff;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.work {
+  position: relative;
+}
+
+.work__title {
+  text-align: center;
+  padding: 80px 0 40px;
+}
+
+.work__line {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.work__line:nth-child(odd) {
+  background-color: #f5f6fa;
+}
+
+.work__line:nth-child(3) {
+  width: 80%;
+}
+
+.work__line:nth-child(5) {
+  width: 65%;
+}
+
+.work__item {
+  width: 600px;
+  margin: 0px auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 64px;
+}
+
+.work__img {
+  margin: 0 20px;
+}
+
+.work__name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.work:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  top: 0;
+  /* Положение треугольника */
+  border: 40px solid transparent;
+  /* Прозрачные границы */
+  border-top: 24px solid #f5f6fa;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 @media (max-width: 1182px) {
@@ -630,6 +927,10 @@ H4 {
 
   .hero__ofer {
     width: 550px;
+  }
+
+  .hero__title {
+    font-size: 42px;
   }
 
   .card {
@@ -660,7 +961,7 @@ H4 {
   }
 
   .hero__ofer {
-    top: 20%;
+    top: 10%;
   }
 
   .price__row {
@@ -671,6 +972,19 @@ H4 {
 
   .price__block {
     justify-content: space-around;
+  }
+
+  .preim__img svg {
+    width: 145px;
+    height: 145px;
+  }
+
+  .work__line:nth-child(3) {
+    width: 100%;
+  }
+
+  .work__line:nth-child(5) {
+    width: 100%;
   }
 }
 
@@ -689,6 +1003,7 @@ H4 {
   }
 
   .header__burger {
+    margin-top: 5px;
     display: block;
     position: relative;
     width: 30px;
@@ -772,7 +1087,8 @@ H4 {
 
   .menu__items li {
     border-bottom: 1px solid #f5f6fa;
-    padding: 8px;
+    padding: 8px  20px 8px;
+    margin-left: 10px;
   }
 
   .menu__items {
@@ -798,22 +1114,64 @@ H4 {
 
   .hero__ofer h4 {
     margin-left: 40px;
+    font-size: 20px;
   }
 
   .hero__ofer p {
-    margin: 18px 0px 14px 40px;
+    margin: 24px 0px;
     color: #d3d7e9;
+  }
+
+  .hero__label {
+    text-align: center;
+    margin: 40px 0px 30px 0px;
   }
 
   .hero__title {
     font-size: 24px;
     margin: 45px 0px 6px 0px;
   }
+
+  .price__title h3 {
+    font-size: 20px;
+    padding: 0px 0;
+  }
+
+  .calc__title h4 {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .preim__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+  }
+
+  .preim__img svg {
+    width: 96px;
+    height: 96px;
+  }
+
+  .work__title {
+    padding: 50px 0px 30px 0px;
+  }
+
+  .work__item {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 479.98px) {
+  H4 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
   .header__row {
-    padding-top: 8px;
+    padding-top: 12px;
   }
 
   .hero__row {
@@ -824,10 +1182,12 @@ H4 {
 
   .hero__ofer {
     top: 10%;
+    width: 90%;
   }
 
   .hero__ofer h4 {
     font-size: 16px;
+    width: 80%;
   }
 
   .hero__ofer p {
@@ -836,6 +1196,10 @@ H4 {
 
   .hero__btn {
     margin: 30px auto 20px;
+  }
+
+  .price__title {
+    padding: 20px 0;
   }
 
   .price__block {
@@ -847,6 +1211,10 @@ H4 {
   .card {
     align-self: center;
   }
+
+  .work__name {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -857,7 +1225,7 @@ H4 {
 
 @media screen and (max-width: 410px) {
   .hero__title {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 

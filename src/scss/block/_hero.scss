@@ -24,17 +24,17 @@
   // .hero__ofer
   &__ofer {
     margin-left: 15px;
-    width: 600px;
-    height: 300px;
+    width: 700px;
+    height: 350px;
     background-color: rgba(53, 59, 72, 0.66);
     position: absolute;
     z-index: 5;
-    top: 18%;
+    top: 14%;
     @media screen and (max-width: $md1+px) {
       width: 550px;
     }
     @media screen and (max-width: $md2+px) {
-      top: 20%;
+      top: 10%;
     }
     @media screen and (max-width: $md3+px) { 
       width: 90%;
@@ -44,37 +44,36 @@
     }
     @media screen and (max-width: $md4+px) { 
       top:10%;
+      width: 90%;
+      
+    
     }
     h4 {
-      margin-left: 56px;
-      font-size: 20px;
-      font-weight: 500;
-      font-stretch: normal;
+      margin-left: 75px;
+      font-size: 24px;
       font-style: normal;
       line-height: 1.1;
       letter-spacing: normal;
       color: $light;
+      font-weight: normal;
       @media screen and (max-width: $md3+px) {
         margin-left: 40px;
+        font-size: 20px;
       }
       @media screen and (max-width: $md4+px) { 
         font-size: 16px;
+          width: 80%;
       }
       
     }
     p {
-      margin: 18px 0px 14px 56px;
-
+      margin: 30px 0;
+      // text-align: center;
       height: 16px;
       font-size: 14px;
-
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
       color: $light;
       @media screen and (max-width: $md3+px) { 
-        margin: 18px 0px 14px 40px;
+        margin: 24px 0px;
         color: darken($light, 10%);
         
       }
@@ -83,17 +82,35 @@
       }
     }
   }
+  &__label{
+    width: 100%;
+    text-align: left;
+   
+
+    // position: absolute;
+    margin: 40px 0px 30px 70px;
+    @media screen and (max-width: $md3+px) { 
+      text-align: center;
+      margin: 40px 0px 30px 0px;
+      
+    }
+  }
   &__title {
     margin: 65px 0px 6px 0px;
     font-weight: bold;
-    font-stretch: condensed;
+    font-family: 'Roboto Condensed', sans-serif;
     color: $light;
+    font-size: 52px;
+    @media screen and (max-width: $md1+px) { 
+      font-size: 42px;
+      
+    }
     @media screen and (max-width: $md3+px) {
       font-size: 24px;
       margin: 45px 0px 6px 0px;
     }
     @media screen and (max-width: 410px) { 
-        font-size: 20px;
+        font-size: 18px;
       }
     @media screen and (max-width: 360px) { 
         font-size: 18px;
@@ -106,18 +123,20 @@
   }
 }
 .hero__btn {
-  display: block;
-  height: 48px;
-  padding: 13px 30px;
-  margin: 20px 0px 20px 96px;
+  // display: block;
+  // width: 167px;
+  height: 37px;
+  padding: 8px 30px;
+  margin: 20px  auto;
+  background: #EB5757;
   @media screen and (max-width: $md4+px) { 
     margin: 30px auto 20px;
   }
 }
 .btn {
-  width: 167px;
-
-  background-image: linear-gradient(to bottom, #2ecc71, #27ae60);
+  
+  
+  // background-image: linear-gradient(to bottom, #2ecc71, #27ae60);
   font-size: 18px;
   font-weight: bold;
   text-align: center;

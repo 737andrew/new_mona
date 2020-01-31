@@ -1,0 +1,67 @@
+.preim {
+  position: relative;
+  width: 100%;
+  background-color: $light;
+		// .preim__title
+		&__title {
+      padding-top: 50px;
+      text-align: center;
+     
+		}
+		// .preim__row
+		&__row {
+      padding: 40px 0;
+      display: flex;
+      justify-content: space-around;
+      @media screen and (max-width: $md3+px) { 
+        flex-direction:column;
+      }
+		}
+		// .preim__block
+		&__block {
+      display: flex;
+      justify-content: space-between;
+		}
+		// .preim__item
+		&__item {
+      text-align: center;
+      flex-basis: 50%;
+      // width: 100px;
+		}
+		// .preim__img
+		&__img {
+      svg{
+        @media screen and (max-width: $md2+px) { 
+          width: 145px;
+          height: 145px;
+        }
+        @media screen and (max-width: $md3+px) { 
+          width: 96px;
+          height: 96px;
+        }
+      }
+		}
+		// .preim__name
+		&__name {
+      
+      margin: 20px;
+		}
+}
+.container {
+}
+.left {
+}
+.right {
+}
+.preim::after{
+  content: "";
+  position: absolute;
+// margin-left: auto;
+left: 50%;
+    margin-right: -50%;
+    top: 0; /* Положение треугольника */
+    border: 40px solid transparent; /* Прозрачные границы */
+    border-top: 24px solid $white;
+    transform: translateX(-50%);
+
+}

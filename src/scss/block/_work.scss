@@ -1,0 +1,82 @@
+.work {
+  position: relative;
+  // .work__title
+  &__title {
+    text-align: center;
+    padding: 80px 0 40px ;
+    @media screen and (max-width: $md3+px) { 
+      padding: 50px 0px 30px 0px;
+      
+    }
+  }
+  // .work__row
+  &__row {
+  }
+  // .work__line
+  &__line {
+    width: 100%;
+    margin: 0 auto;
+    
+    &:nth-child(odd){
+      background-color: $light;
+    }
+    &:nth-child(3){
+      width: 80%;
+      @media screen and (max-width: $md2+px) { 
+        width: 100%;
+      }
+
+      
+    }
+    &:nth-child(5){
+      width: 65%;
+      @media screen and (max-width: $md2+px) { 
+        width: 100%;
+      }
+
+    }
+
+  }
+
+  // .work__item
+  &__item {
+    width: 600px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    height: 64px;
+    // padding: 8px 0px;
+        @media screen and (max-width: $md3+px) { 
+      width: 90%;
+    }
+    
+  }
+  // .work__img
+  &__img {
+    margin: 0 20px;
+  }
+  // .work__name
+  &__name {
+    // text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+    @media screen and (max-width: $md4+px) { 
+      font-size: 14px;
+    }
+  }
+
+  &:after {
+  content: "";
+  position: absolute;
+  // margin-left: auto;
+  left: 50%;
+  margin-right: -50%;
+  top: 0; /* Положение треугольника */
+  border: 40px solid transparent; /* Прозрачные границы */
+  border-top: 24px solid $light;
+  transform: translateX(-50%);
+  }
+
+
+
+}

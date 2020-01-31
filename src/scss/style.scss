@@ -56,9 +56,19 @@ H3 {
 
 H4 {
   font-size: 20px;
-  font-weight: bold;
-}
+  font-weight: 500;
+  @media screen and (max-width: $md4+px) { 
 
+          font-size: 18px;
+  }
+}
+h5{
+    font-size: 18px;
+  font-weight: 500;
+  @media screen and (max-width: $md4+px) { 
+    font-size: 16px;
+  }
+}
 
 @mixin Text-Introduction-Text {
   font-size: 18px;
@@ -73,5 +83,8 @@ H4 {
 
 @import "block/_header.scss";
 @import "block/_hero.scss";
+@import "block/_modal.scss";
 @import "block/_price.scss";
+@import "block/_preim.scss";
+@import "block/_work.scss";
 @import "block/_footer.scss";

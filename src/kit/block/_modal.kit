@@ -1,0 +1,24 @@
+<div class="modal">
+  <input class="modal-open" id="modal-2" type="checkbox" hidden>
+  <div class="modal-wrap" aria-hidden="true" role="dialog">
+    <label class="modal-overlay" for="modal-2"></label>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>ПОЗВОНИТЕ</h2>
+        <div class="modal-phone">
+          <a href="tel:+380672718678">+38(067) 271 96 78</a>
+        </div>
+        <p>или оставитьте заявку на сайте</p>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="form.php" role="form">
+          <input name="name" placeholder="* Укажите Ваше имя" class="textbox" required />
+          <input name="emailaddress" placeholder="* Укажите Ваш Email" class="textbox" type="email" required />
+          <input name="submit" class="btn-form btn" type="submit" value="Отправить" />
+        </form>
+      </div>
+
+      <label class="btn-close" for="modal-2" aria-hidden="true"><span>close</span> ×</label>
+    </div>
+  </div>
+</div>

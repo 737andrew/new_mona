@@ -5,51 +5,62 @@
   &__title {
     padding: 30px 0;
     text-align: center;
+    @media screen and (max-width: $md4+px) {
+      padding: 20px 0;
+    }
+    h3 {
+      @media screen and (max-width: $md3+px) {
+        font-size: 20px;
+        padding: 0px 0;
+      }
+    }
   }
   // .price__row
   &__row {
     display: flex;
     justify-content: center;
-    @media screen and (max-width: $md2+px) { 
+    @media screen and (max-width: $md2+px) {
       flex-direction: column;
     }
   }
   // .price__block
   &__block {
     display: flex;
-    @media screen and (max-width: $md2+px) { 
+    @media screen and (max-width: $md2+px) {
       justify-content: space-around;
-      
+
     }
-    @media screen and (max-width: $md4+px) { 
+    @media screen and (max-width: $md4+px) {
       flex-direction: column;
-      
+            
     }
   }
 }
 .card {
-    width: 208px;
+  width: 208px;
   height: 280px;
-  box-shadow: 2px 2px 3px 3px rgba(53, 59, 72, 0.07), -2px -2px 3px 3px rgba(53, 59, 72, 0.07);
-  border: solid 1px $grey;
+  box-shadow: 2px 2px 3px 3px rgba(53, 59, 72, 0.07),
+    -2px -2px 3px 3px rgba(53, 59, 72, 0.07);
+  border-radius: 8px;
+  border: solid 1px $nav;
   background-color: #ffffff;
   margin: 30px;
-  @media screen and (max-width: $md1+px) { 
+  @media screen and (max-width: $md1+px) {
     margin: 30px 15px;
   }
-  @media screen and (max-width: $md4+px) { 
-    align-self:center;
+  @media screen and (max-width: $md4+px) {
+    align-self: center;
   }
   // .card__title
   &__title {
     margin-top: 10px;
-  font-size: 18px;
-  text-align: center;
-  color: $text;
+    font-size: 18px;
+    text-align: center;
+    color: $text;
   }
   // .card__image
   &__image {
-    text-align:center;
+    text-align: center;
     margin: 24px 0;
   }
   // .card__btn
@@ -79,20 +90,21 @@ $border: ceil($tr-hight/10);
 }
 
 .card__btn {
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
 }
-.card__btn-link{
+.card__btn-link {
   height: $tr-hight;
-    display: flex;
+  display: flex;
   position: relative;
   background: $color-2;
-  border-radius: $border;
-
+  box-shadow: inset 0px -2px 0 0 $text;
   font-size: 20px;
   font-weight: 500;
   line-height: 1;
-  letter-spacing: normal;
+  &:hover {
+    background-color: darken($one, 20%);
+  }
 }
 
 .card__btn-left {
@@ -115,6 +127,9 @@ $border: ceil($tr-hight/10);
   }
   span {
     @include tri-span($tr-hight, $color-font-1);
+    &:hover {
+      @include tri-span($tr-hight, $nav);
+    }
   }
 }
 // .card__btn-right
@@ -125,5 +140,36 @@ $border: ceil($tr-hight/10);
   display: flex;
   span {
     @include tri-span($tr-hight, $color-font-2);
+  }
+}
+.calc {
+  // .calc__title
+  &__title {
+    text-align: center;
+    margin: 39px 0px 29px 0px;
+    h4 {
+      @media screen and (max-width: $md3+px) {
+        margin: 0px 0px 20px 0px;
+      }
+    }
+  }
+  &__link {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  // .calc__btn
+  &__btn {
+    display: inline-block;
+    height: 37px;
+    padding: 8px 30px;
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    color: $text;
+    background: $one;
+    box-shadow: inset 0px -2px 0 0 $text;
+    @include anim(0.3s, 0.2s) 
+    &:hover {
+      background-color: $one-20;
+    }
   }
 }
