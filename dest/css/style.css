@@ -1520,6 +1520,10 @@ h5 {
     flex: 0 1 44px;
     margin: 20px 20px;
   }
+
+  .footer__logo {
+    width: 75%;
+  }
 }
 
 @media screen and (max-width: 479.98px) {
@@ -1674,8 +1678,17 @@ h5 {
     align-self: center;
   }
 
+  .footer__c-title h4 {
+    display: none;
+  }
+
   .footer__c-list li {
     height: 44px;
+    font-size: 16px;
+  }
+
+  .footer__c-item {
+    font-size: 16px;
   }
 }
 

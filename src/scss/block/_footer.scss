@@ -28,7 +28,10 @@
   }
   // .footer__logo
   &__logo {
-   
+    @media screen and (max-width: $md3+px) { 
+      
+      width: 75%;
+    }
     
   }
   // .footer__row
@@ -58,7 +61,7 @@
     }
   }
   // .footer__ul
-  &__ul {}
+
   // .footer__li
   &__li {
     list-style-type: disc;
@@ -88,7 +91,11 @@
   &__c-title {
     color: $light;
     text-align: center;
-    h4{text-transform: uppercase;}
+    h4{text-transform: uppercase;
+    @media screen and (max-width: $md4+px) { 
+      display: none;
+    }}
+    
   }
   // .footer__c-block
   &__c-block {
@@ -107,6 +114,7 @@
     // padding: .5rem 0;
     @media screen and (max-width: $md4+px) { 
       height: 44px;
+      font-size: 16px;
     }
     }
   }
@@ -115,6 +123,9 @@
       display: block;
     float: right;
         font-size: 18px;
+        @media screen and (max-width: $md4+px) { 
+          font-size: 16px;
+        }
   }
   // .footer__social
   &__social {
