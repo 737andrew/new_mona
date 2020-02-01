@@ -126,7 +126,7 @@
   // display: block;
   // width: 167px;
   height: 37px;
-  padding: 8px 30px;
+  
   margin: 20px  auto;
   background: #EB5757;
   @media screen and (max-width: $md4+px) { 
@@ -134,8 +134,8 @@
   }
 }
 .btn {
-  
-  
+  padding: 8px 30px;
+  @include anim(0.3s, 0.2s) ;
   // background-image: linear-gradient(to bottom, #2ecc71, #27ae60);
   font-size: 18px;
   font-weight: bold;

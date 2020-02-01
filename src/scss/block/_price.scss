@@ -167,7 +167,7 @@ $border: ceil($tr-hight/10);
     color: $text;
     background-color: $one;
     box-shadow: inset 0px -2px 0 0 $text;
-    @include anim(0.3s, 0.2s) ;
+    
         &:hover{
         background-color: $one-20;
       }

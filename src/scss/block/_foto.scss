@@ -1,0 +1,76 @@
+.photo {
+  position: relative;
+  width: 100%;
+  background-color: $light;
+
+  // .photo__title
+  &__title {
+    padding: 50px 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  // .photo__row
+  &__row {
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: $md4+px) {
+      flex-direction: column;
+    }
+  }
+  // .photo__block-bg
+  &__block-bg {
+    flex: 0 1 66.66%;
+    align-self: center;
+    text-align: center;
+
+    @media screen and (max-width: $md4+px) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  // .photo__bg-link
+  &__bg-link {
+    position: relative;
+    display: block;
+    // text-align: center;
+    // margin: auto;
+    img {
+      width: 90%;
+      // display: block;
+    }
+  }
+  // .photo__block-sm
+  &__block-sm {
+    flex: 0 0 33.33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  // .photo__sm-link
+  &__sm-link {
+    text-align: center;
+    @media screen and (max-width: $md4+px) {
+      margin-bottom: 1.5rem;
+    }
+    img {
+      width: 80%;
+      @media screen and (max-width: $md4+px) {
+        width: 90%;
+      }
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    // margin-left: auto;
+    left: 50%;
+    margin-right: -50%;
+    top: 0; /* Положение треугольника */
+    border: 40px solid transparent; /* Прозрачные границы */
+    border-top: 24px solid $white;
+    transform: translateX(-50%);
+  }
+}
+.delay {
+}

@@ -1,0 +1,145 @@
+.footer {
+
+  width: 100%;
+  background-color: $bg-c;
+
+    a {
+      color:$light;
+      transition: .3s;
+      // @include anim(0.3s, 0.2s) ;
+      &:hover{
+       color: $nav;
+     }
+
+    }
+
+  // .footer__title
+  &__title {
+    padding: 40px 0 20px;
+    text-align: center;
+    svg{
+      height: 24px;
+      fill: $light;
+      transition: .3s;
+      &:hover{
+        fill: $nav;
+      }
+    }
+  }
+  // .footer__logo
+  &__logo {
+   
+    
+  }
+  // .footer__row
+  &__row {
+
+    display: flex;
+    justify-content: space-around;
+      @media screen and (max-width: $md4+px) { 
+            flex-direction: column;
+        }
+  }
+  // .footer__sitemap
+  &__sitemap {
+    color: $light;
+      @media screen and (max-width: $md4+px) { 
+           display: none; 
+          text-align: center;
+          margin-top: 20px;
+        }
+
+  }
+  // .footer__sitemap-link
+  &__sitemap-link {
+    h4{
+     padding: 0px 0 20px;
+
+    }
+  }
+  // .footer__ul
+  &__ul {}
+  // .footer__li
+  &__li {
+    list-style-type: disc;
+    height: 24px;
+    // margin: 4px 0;
+    @media screen and (max-width: $md4+px) { 
+      margin: 8px 0;
+      font-size: 14px;
+    }
+    a{
+      display: block;
+    }
+  }
+  // .footer__contact
+  &__contact {
+
+    flex: 0 1 300px;
+      @media screen and (max-width: $md4+px) { 
+            order:-1;
+            flex:0 1 0;
+            width: 90%;
+            align-self: center;
+        }
+  
+  }
+  // .footer__c-title
+  &__c-title {
+    color: $light;
+    text-align: center;
+    h4{text-transform: uppercase;}
+  }
+  // .footer__c-block
+  &__c-block {
+  margin-top: 15px;
+  }
+  // .footer__c-list
+  &__c-list {
+        // width: 90%;
+    // list-style: none;
+    text-align: left;
+    margin: 0 auto;
+    li{
+      height: 32px;
+    color: $light;
+    font-size: 18px;
+    // padding: .5rem 0;
+    @media screen and (max-width: $md4+px) { 
+      height: 44px;
+    }
+    }
+  }
+  // .footer__c-item
+  &__c-item {
+      display: block;
+    float: right;
+        font-size: 18px;
+  }
+  // .footer__social
+  &__social {
+    text-align: center;
+    // margin: 1rem 0;
+    svg{width: 32px;
+        margin: 10px 16px 10px 16px;
+         fill:$light;
+         transition: .3s;
+          &:hover{
+          fill:$nav;
+        }
+      }
+        
+  }
+
+  // .footer__by
+  &__by {
+    text-align: center;
+    color: $grey;
+    padding-bottom: 20px;
+    
+    p {
+      margin: 5px;
+    }
+  }
+}
+

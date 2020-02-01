@@ -21,7 +21,7 @@ gulp.task("sass", function() {
 });
 gulp.task("kit", async function() {
   gulp
-  .src("./src/kit/**/*.kit")
+    .src(["./src/kit/*.kit", "src/kit/block/_*.kit"])
   .pipe(kit())
   .pipe(gulp.dest("./dest"))
  
@@ -34,7 +34,7 @@ gulp.task("serve", function() {
     server: "dest/"
   });
     gulp.watch("./src/scss/**/*.scss", gulp.series("sass"));
-  gulp.watch(["./src/kit/**/*.kit","src/kit/block/_*.kit"], gulp.series("kit"));
+  gulp.watch(["./src/kit/*.kit","src/kit/block/_*.kit"], gulp.series("kit"));
   gulp.watch("./dest/*.html").on("change", browserSync.reload);
    
 });

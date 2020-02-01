@@ -1,0 +1,130 @@
+.quesion {
+  width: 100%;
+  background-color: $nav;
+  color: $light;
+  &__btn{
+    background: $one;
+    color: $text;
+  
+            &:hover{
+        background-color: $one-20;
+      }
+  }
+  // .quesion__row
+  &__row {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+  // .quesion__ticker
+  &__ticker {
+
+ 
+      padding: 40px 0px 20px 0px;
+      h2{
+    color: $light;
+      }
+  }
+  // .quesion__text
+  &__text {}
+  // .quesion__title
+  &__title {
+        color: $light;
+        p{
+          margin: 0;
+        }
+  }
+  // .quesion__subscribe
+  // &__subscribe 
+  &__form{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 30px 0;
+
+      @media screen and (max-width: $md3+px) { 
+            flex-direction: column;
+            padding: 0px 0 20px 0;
+
+        }
+  }
+  &__btn{
+          @media screen and (max-width: $md3+px) { 
+          margin: 20px 20px;
+
+        }
+  }
+
+
+
+  &__input{
+    flex: 0 1 400px;
+    padding-left: 10px;
+    margin: 0 30px;
+    border-radius: 6px;
+    
+
+
+    @media screen and (max-width: $md3+px) { 
+            flex: 0 1 44px;
+            margin: 20px 20px;
+        }
+    &:focus{
+          outline:none;
+    border:#0097e6 1px solid;
+    color:#0097e6;
+    }
+    &::placeholder{
+      color :$nav;
+    }
+  }
+}
+
+  @keyframes tickerv {
+    0% {margin-top: 0;}
+    25% {margin-top: -26px;}
+    50% {margin-top: -52px;}
+    75% {margin-top: -78px;}
+    100% {margin-top: 0;}
+     
+    
+     
+  }
+  @media screen and (max-width: $md4+px) { 
+    @keyframes tickerv {
+             0% {margin-top: 0;}
+    25% {margin-top: -40px;}
+    50% {margin-top: -80px;}
+    75% {margin-top: -120px;}
+    100% {margin-top: 0;}
+    }
+        }
+  .quesion__text {
+    box-sizing: content-box;
+    height: 25px;
+    overflow: hidden;
+      @media screen and (max-width: $md4+px) { 
+            height: 40px;
+        }
+  } 
+  .quesion__text ul {
+    padding:0;
+    margin:0;
+    list-style-type: none;
+    animation-name: tickerv;
+    animation-duration:10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1, 0, .5, 0);
+  }
+  .quesion__text ul:hover {
+    animation-play-state: paused;
+  }
+  .quesion__text ul li {
+    font-size: 24px;
+    color: $light;
+    line-height: 26px;
+      @media screen and (max-width: $md4+px) { 
+            font-size: 16px;
+            line-height: 20px;
+        }
+  }
+ 
