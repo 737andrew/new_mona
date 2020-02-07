@@ -3,6 +3,7 @@
   background-color: #fff;
   @media screen and (max-width: $md2+px) {
     height: 80px;
+    border-bottom: 1px solid $nav;
   }
   @media screen and (max-width: $md3+px) {
     height: 50px;
