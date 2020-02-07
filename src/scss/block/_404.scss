@@ -1,0 +1,66 @@
+.container-404 {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+  @media (max-width: $md1+px) {max-width: 960px;}
+  @media screen and (max-width: $md2+px) {max-width: 768px;}
+  @media screen and (max-width: $md3+px) {max-width:480px;padding: 0 1.6rem;};
+   position: relative;
+}
+.page404{
+  
+  display: flex;
+  justify-content: space-between;
+  
+  width: 100%;
+}
+
+.logo404{
+  margin-top: 50px;
+}
+
+.bg404 {
+}
+.text404 {
+  position: absolute;
+  left: 100px;
+  top: 30%;
+  font-size: 28px;
+  @media screen and (max-width: $md2+px) { 
+    left: 15px;
+  }
+}
+.title404 {
+  position: absolute;
+  left: 100px;
+  top: 45%;
+
+  font-style: normal;
+font-weight: 900;
+font-size: 52px;
+line-height: 64px;
+text-align: center;
+@media screen and (max-width: $md2+px) { 
+  left: 15px;
+}
+}
+
+
+
+
+.link404 {
+  position: absolute;
+  left: 100px;
+  top: 70%;
+  @media screen and (max-width: $md2+px) { 
+    left: 15px;
+  }
+}
+.btn {
+}
+.btn404 {
+  color: $text;
+  border: 2px solid $text;
+
+}

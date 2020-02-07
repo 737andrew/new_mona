@@ -19,6 +19,7 @@ body{
 .cf:after {
   clear: both; }
 
+
 .container {
   width: 100%;
   max-width: 1170px;
@@ -91,4 +92,5 @@ h5{
 @import "block/_quession.scss";
 @import "block/_main.scss";
 @import "block/_sidebar.scss";
+@import "block/_404.scss";
 @import "block/_footer.scss";

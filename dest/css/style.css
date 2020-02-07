@@ -1446,6 +1446,55 @@ h5 {
   width: 100%;
 }
 
+.container-404 {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+
+.page404 {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo404 {
+  margin-top: 50px;
+}
+
+.text404 {
+  position: absolute;
+  left: 100px;
+  top: 30%;
+  font-size: 28px;
+}
+
+.title404 {
+  position: absolute;
+  left: 100px;
+  top: 45%;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 52px;
+  line-height: 64px;
+  text-align: center;
+}
+
+.link404 {
+  position: absolute;
+  left: 100px;
+  top: 70%;
+}
+
+.btn404 {
+  color: #2f3640;
+  border: 2px solid #2f3640;
+}
+
 .footer {
   width: 100%;
   background-color: #353b48;
@@ -1563,6 +1612,10 @@ h5 {
 
 @media (max-width: 1182px) {
   .container {
+    max-width: 960px;
+  }
+
+  .container-404 {
     max-width: 960px;
   }
 }
@@ -1691,6 +1744,22 @@ h5 {
 
   .side {
     width: 40%;
+  }
+
+  .container-404 {
+    max-width: 768px;
+  }
+
+  .text404 {
+    left: 15px;
+  }
+
+  .title404 {
+    left: 15px;
+  }
+
+  .link404 {
+    left: 15px;
   }
 }
 
@@ -1936,6 +2005,11 @@ h5 {
 
   .side {
     width: 80%;
+  }
+
+  .container-404 {
+    max-width: 480px;
+    padding: 0 1.6rem;
   }
 
   .footer__logo {

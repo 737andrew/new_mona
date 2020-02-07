@@ -31,6 +31,7 @@ gulp.task("serve", function() {
   browserSync.init({
     browser: "Google Chrome Canary",
     notify: false,
+    injectChanges: false,
     server: "dest/"
   });
     gulp.watch("./src/scss/**/*.scss", gulp.series("sass"));
